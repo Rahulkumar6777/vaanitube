@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  worker:
+    image: transcodingworker:v1
+    container_name: worker
+    environment:
+      BUCKET_NAME: "devload"
+      REDIS_HOST: "redis"
+      REDIS_PORT: "6379"
+      R2_ENDPOINT: ''
+      R2_ACCESSID: ''
+      R2_ACCESSKEY: ''
+      REDIS_PASSWORD: ''
+      MINIO_ENDPOINT: 'http://minio:9000/devload'
+      MINIO_ACCESSID: 'RahuloAdmin123!'
+      MINIO_ACCESSKEY: 'Str0ngP@ssw0rd!2025'
+    networks:
+      - vaani-net
+
+networks:
+  vaani-net:
+    external: true

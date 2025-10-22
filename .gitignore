@@ -1,0 +1,10 @@
+# Ignore all node_modules folders
+node_modules/
+**/node_modules/
+
+# Ignore all .env files
+.env
+**/.env
+
+docker-compose.yml/
+**/docker-compose.yml/
